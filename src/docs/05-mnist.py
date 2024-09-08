@@ -75,7 +75,7 @@ def train_fn():
         train_func,
         scaling_config=ScalingConfig(
             # num_workers = number of worker nodes with the ray head node included
-            num_workers=3,
+            num_workers=1,
             use_gpu=True,
             resources_per_worker={
                 "CPU": 1,
@@ -93,7 +93,8 @@ def train_fn():
 
 runtime_env = {"pip": ["transformers==4.41.2", "datasets==2.17.0", "accelerate==0.31.0", "scikit-learn==1.5.0"]}
 ray_cluster_uri="http://localhost:8265"
-ray.init(address=ray_cluster_uri, runtime_env=runtime_env)
-
+# ray.init(address=ray_cluster_uri, runtime_env=runtime_env)
+ray.init(num_cpus=4, num_gpus=1, runtime_env=runtime_env)
+print(ray.cluster_resources())
 ray.get(train_fn.remote())
 
