@@ -1,2 +1,2 @@
 # ray
-Ray examples
+Ray examples for Python
