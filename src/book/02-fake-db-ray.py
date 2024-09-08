@@ -8,11 +8,11 @@ database = [
 
 @ray.remote
 def retrieve_task(item):
-    time.sleep(item / 10.) 
+    time.sleep(item / 10.)
     return item, database[item]
 
 def print_runtime(input_data, start_time):
-    print(f'Runtime: {time.time() - start_time:.2f} seconds, data:') 
+    print(f'Runtime: {time.time() - start_time:.2f} seconds, data:')
     print(*input_data, sep="\n")
 
 ray.init()
