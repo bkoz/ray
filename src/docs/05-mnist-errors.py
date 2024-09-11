@@ -92,6 +92,7 @@ def train_fn():
     result: ray.train.Result = ray_trainer.fit()
 
 runtime_env = {"pip": ["transformers==4.41.2", "datasets==2.17.0", "accelerate==0.31.0", "scikit-learn==1.5.0"]}
+runtime_env = {"pip": ["transformers", "datasets", "accelerate", "scikit-learn"]}
 ray_cluster_uri="http://localhost:8265"
 # ray.init(address=ray_cluster_uri, runtime_env=runtime_env)
 ray.init(num_cpus=4, num_gpus=1, runtime_env=runtime_env)

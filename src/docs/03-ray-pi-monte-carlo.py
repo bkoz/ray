@@ -42,6 +42,7 @@ def sampling_task(num_samples: int, task_id: int,
 # Change this to match your cluster scale.
 NUM_SAMPLING_TASKS = 4
 NUM_SAMPLES_PER_TASK = 10_000_000
+# NUM_SAMPLES_PER_TASK = 100_000_000
 TOTAL_NUM_SAMPLES = NUM_SAMPLING_TASKS * NUM_SAMPLES_PER_TASK
 
 # Create the progress actor.
