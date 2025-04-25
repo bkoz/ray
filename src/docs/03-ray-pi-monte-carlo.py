@@ -3,7 +3,7 @@ import math
 import time
 import random
 
-NUM_CPUS = 1
+NUM_CPUS = 4
 ray.init(num_cpus=NUM_CPUS)
 print(ray.cluster_resources())
 
