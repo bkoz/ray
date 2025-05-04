@@ -3,6 +3,8 @@
     "features": {
         "ghcr.io/EliiseS/devcontainer-features/bash-profile:1": {
             "command": "alias e=echo"
-        }
+        },
+        {"ghcr.io/prulloac/devcontainer-features/ollama:1": {}
+    }
     }
 }
