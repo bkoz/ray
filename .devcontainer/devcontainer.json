@@ -2,7 +2,7 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/EliiseS/devcontainer-features/bash-profile:1": {
-            "command": "alias e=echo"
+            "command": "alias h=history; alias f=free"
         }
     }
 }
