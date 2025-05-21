@@ -37,7 +37,7 @@ counter = Counter.remote()
 # Call the actor 5 times.
 obj_ref = [counter.increment.remote() for _ in range(5)]
 
-# Wait for the actor to finish using ray.wait()
+# Optionally, wait for the actor to finish using ray.wait()
 # This will block until the actor has finished with num_returns tasks.
 # Note: This will not block if the actor is already finished.
 obj_ref, _ = ray.wait(obj_ref, num_returns=3)
